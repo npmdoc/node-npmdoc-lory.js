@@ -1,0 +1,625 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/meandmax/lory#readme">lory.js (v2.2.1)</a>
+</h1>
+<h4>Touch enabled minimalistic slider written in vanilla JavaScript.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.lory.js">module lory.js</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lory.js.js.local_karma_conf">
+            function <span class="apidocSignatureSpan">lory.js.</span>js.local_karma_conf
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lory.js.js.saucelabs_karma_conf">
+            function <span class="apidocSignatureSpan">lory.js.</span>js.saucelabs_karma_conf
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lory.js.js.travis_karma_conf">
+            function <span class="apidocSignatureSpan">lory.js.</span>js.travis_karma_conf
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.lory.js.local_karma_conf">module lory.js.local_karma_conf</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lory.js.local_karma_conf.local_karma_conf">
+            function <span class="apidocSignatureSpan">lory.js.</span>local_karma_conf
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.lory.js.saucelabs_karma_conf">module lory.js.saucelabs_karma_conf</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lory.js.saucelabs_karma_conf.saucelabs_karma_conf">
+            function <span class="apidocSignatureSpan">lory.js.</span>saucelabs_karma_conf
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.lory.js.travis_karma_conf">module lory.js.travis_karma_conf</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lory.js.travis_karma_conf.travis_karma_conf">
+            function <span class="apidocSignatureSpan">lory.js.</span>travis_karma_conf
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.lory.js" id="apidoc.module.lory.js">module lory.js</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.lory.js.js.local_karma_conf" id="apidoc.element.lory.js.js.local_karma_conf">
+        function <span class="apidocSignatureSpan">lory.js.</span>js.local_karma_conf
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">js.local_karma_conf = function (config) {
+    config.set({
+        frameworks: [
+            'mocha',
+            'chai',
+            'fixture'
+        ],
+
+        reporters: [
+            'mocha'
+        ],
+
+        files: [
+            'dist/lory.js',
+            'test/lory.test.js',
+            'static/app.css',
+            'http://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js',
+
+            {
+                pattern: 'test/*.html'
+            }
+        ],
+
+        browsers: [
+            'Chrome',
+            'ChromeCanary',
+            'PhantomJS',
+            'Firefox',
+            'Safari'
+        ],
+
+        plugins: [
+            'karma-mocha',
+            'karma-mocha-reporter',
+            'karma-chai',
+            'karma-fixture',
+            'karma-chrome-launcher',
+            'karma-phantomjs-launcher',
+            'karma-ie-launcher',
+            'karma-firefox-launcher',
+            'karma-safari-launcher',
+            'karma-html2js-preprocessor'
+        ],
+
+        preprocessors: {
+            'test/*.html': ['html2js']
+        },
+
+        singleRun: true
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lory.js.js.saucelabs_karma_conf" id="apidoc.element.lory.js.js.saucelabs_karma_conf">
+        function <span class="apidocSignatureSpan">lory.js.</span>js.saucelabs_karma_conf
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">js.saucelabs_karma_conf = function (config) {
+    var customLaunchers = {
+        sauceLabsInternetExplorer10: {
+            base: 'SauceLabs',
+            browserName: 'internet explorer',
+            platform: 'Windows 7',
+            version: '10.0'
+        },
+        sauceLabsInternetExplorer11: {
+            base: 'SauceLabs',
+            browserName: 'internet explorer',
+            platform: 'Windows 7',
+            version: '11.0'
+        },
+        edge: {
+            base: 'SauceLabs',
+            browserName: 'microsoftedge'
+        },
+        sauceLabsChrome46: {
+            base: 'SauceLabs',
+            browserName: 'chrome',
+            platform: 'Linux',
+            version: '46.0'
+        },
+        sauceLabsChrome45: {
+            base: 'SauceLabs',
+            browserName: 'chrome',
+            platform: 'Linux',
+            version: '45.0'
+        },
+        sauceLabsFirefox41: {
+            base: 'SauceLabs',
+            browserName: 'firefox',
+            platform: 'Linux',
+            version: '41.0'
+        },
+        sauceLabsFirefox40: {
+            base: 'SauceLabs',
+            browserName: 'firefox',
+            platform: 'Linux',
+            version: '40.0'
+        },
+        sauceLabsSafari7: {
+            base: 'SauceLabs',
+            browserName: 'safari',
+            platform: 'Mac 10.9',
+            version: '7.0'
+        },
+        sauceLabsSafari8: {
+            base: 'SauceLabs',
+            browserName: 'safari',
+            platform: 'Mac 10.10',
+            version: '8.0'
+        }
+    };
+
+    config.set({
+        sauceLabs: {
+            testName: 'lory Browser Tests',
+            connectOptions: {
+                port: 5757
+            }
+        },
+
+        customLaunchers: customLaunchers,
+        browsers: Object.keys(customLaunchers),
+        reporters: ['dots', 'saucelabs'],
+
+        frameworks: [
+            'mocha',
+            'chai',
+            'fixture'
+        ],
+
+       files: [
+            'dist/lory.js',
+            'test/lory.test.js',
+            'static/app.css',
+            'http://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js',
+
+            {
+                pattern: 'test/*.html'
+            }
+        ],
+
+        plugins: [
+            'karma-mocha',
+            'karma-mocha-reporter',
+            'karma-chai',
+            'karma-fixture',
+            'karma-sauce-launcher',
+            'karma-html2js-preprocessor'
+        ],
+
+        preprocessors: {
+            'test/*.html': ['html2js']
+        },
+
+        browserDisconnectTimeout : 10000, // default 2000
+        browserDisconnectTolerance : 1, // default 0
+        browserNoActivityTimeout : 4*60*1000, //default 10000
+        captureTimeout : 4*60*1000, //default 60000
+
+        singleRun: true
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lory.js.js.travis_karma_conf" id="apidoc.element.lory.js.js.travis_karma_conf">
+        function <span class="apidocSignatureSpan">lory.js.</span>js.travis_karma_conf
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">js.travis_karma_conf = function (config) {
+    config.set({
+        frameworks: [
+            'mocha',
+            'chai',
+            'fixture'
+        ],
+
+        reporters: [
+            'mocha'
+        ],
+
+        files: [
+            'dist/lory.js',
+            'test/lory.test.js',
+            'static/app.css',
+            'http://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js',
+
+            {
+                pattern: 'test/*.html'
+            }
+        ],
+
+        browsers: [
+            'PhantomJS'
+        ],
+
+        plugins: [
+            'karma-mocha',
+            'karma-mocha-reporter',
+            'karma-chai',
+            'karma-fixture',
+            'karma-phantomjs-launcher',
+            'karma-html2js-preprocessor'
+        ],
+
+        preprocessors: {
+            'test/*.html': ['html2js']
+        },
+
+        singleRun: true
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.lory.js.local_karma_conf" id="apidoc.module.lory.js.local_karma_conf">module lory.js.local_karma_conf</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.lory.js.local_karma_conf.local_karma_conf" id="apidoc.element.lory.js.local_karma_conf.local_karma_conf">
+        function <span class="apidocSignatureSpan">lory.js.</span>local_karma_conf
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">local_karma_conf = function (config) {
+    config.set({
+        frameworks: [
+            'mocha',
+            'chai',
+            'fixture'
+        ],
+
+        reporters: [
+            'mocha'
+        ],
+
+        files: [
+            'dist/lory.js',
+            'test/lory.test.js',
+            'static/app.css',
+            'http://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js',
+
+            {
+                pattern: 'test/*.html'
+            }
+        ],
+
+        browsers: [
+            'Chrome',
+            'ChromeCanary',
+            'PhantomJS',
+            'Firefox',
+            'Safari'
+        ],
+
+        plugins: [
+            'karma-mocha',
+            'karma-mocha-reporter',
+            'karma-chai',
+            'karma-fixture',
+            'karma-chrome-launcher',
+            'karma-phantomjs-launcher',
+            'karma-ie-launcher',
+            'karma-firefox-launcher',
+            'karma-safari-launcher',
+            'karma-html2js-preprocessor'
+        ],
+
+        preprocessors: {
+            'test/*.html': ['html2js']
+        },
+
+        singleRun: true
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.lory.js.saucelabs_karma_conf" id="apidoc.module.lory.js.saucelabs_karma_conf">module lory.js.saucelabs_karma_conf</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.lory.js.saucelabs_karma_conf.saucelabs_karma_conf" id="apidoc.element.lory.js.saucelabs_karma_conf.saucelabs_karma_conf">
+        function <span class="apidocSignatureSpan">lory.js.</span>saucelabs_karma_conf
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">saucelabs_karma_conf = function (config) {
+    var customLaunchers = {
+        sauceLabsInternetExplorer10: {
+            base: 'SauceLabs',
+            browserName: 'internet explorer',
+            platform: 'Windows 7',
+            version: '10.0'
+        },
+        sauceLabsInternetExplorer11: {
+            base: 'SauceLabs',
+            browserName: 'internet explorer',
+            platform: 'Windows 7',
+            version: '11.0'
+        },
+        edge: {
+            base: 'SauceLabs',
+            browserName: 'microsoftedge'
+        },
+        sauceLabsChrome46: {
+            base: 'SauceLabs',
+            browserName: 'chrome',
+            platform: 'Linux',
+            version: '46.0'
+        },
+        sauceLabsChrome45: {
+            base: 'SauceLabs',
+            browserName: 'chrome',
+            platform: 'Linux',
+            version: '45.0'
+        },
+        sauceLabsFirefox41: {
+            base: 'SauceLabs',
+            browserName: 'firefox',
+            platform: 'Linux',
+            version: '41.0'
+        },
+        sauceLabsFirefox40: {
+            base: 'SauceLabs',
+            browserName: 'firefox',
+            platform: 'Linux',
+            version: '40.0'
+        },
+        sauceLabsSafari7: {
+            base: 'SauceLabs',
+            browserName: 'safari',
+            platform: 'Mac 10.9',
+            version: '7.0'
+        },
+        sauceLabsSafari8: {
+            base: 'SauceLabs',
+            browserName: 'safari',
+            platform: 'Mac 10.10',
+            version: '8.0'
+        }
+    };
+
+    config.set({
+        sauceLabs: {
+            testName: 'lory Browser Tests',
+            connectOptions: {
+                port: 5757
+            }
+        },
+
+        customLaunchers: customLaunchers,
+        browsers: Object.keys(customLaunchers),
+        reporters: ['dots', 'saucelabs'],
+
+        frameworks: [
+            'mocha',
+            'chai',
+            'fixture'
+        ],
+
+       files: [
+            'dist/lory.js',
+            'test/lory.test.js',
+            'static/app.css',
+            'http://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js',
+
+            {
+                pattern: 'test/*.html'
+            }
+        ],
+
+        plugins: [
+            'karma-mocha',
+            'karma-mocha-reporter',
+            'karma-chai',
+            'karma-fixture',
+            'karma-sauce-launcher',
+            'karma-html2js-preprocessor'
+        ],
+
+        preprocessors: {
+            'test/*.html': ['html2js']
+        },
+
+        browserDisconnectTimeout : 10000, // default 2000
+        browserDisconnectTolerance : 1, // default 0
+        browserNoActivityTimeout : 4*60*1000, //default 10000
+        captureTimeout : 4*60*1000, //default 60000
+
+        singleRun: true
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.lory.js.travis_karma_conf" id="apidoc.module.lory.js.travis_karma_conf">module lory.js.travis_karma_conf</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.lory.js.travis_karma_conf.travis_karma_conf" id="apidoc.element.lory.js.travis_karma_conf.travis_karma_conf">
+        function <span class="apidocSignatureSpan">lory.js.</span>travis_karma_conf
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">travis_karma_conf = function (config) {
+    config.set({
+        frameworks: [
+            'mocha',
+            'chai',
+            'fixture'
+        ],
+
+        reporters: [
+            'mocha'
+        ],
+
+        files: [
+            'dist/lory.js',
+            'test/lory.test.js',
+            'static/app.css',
+            'http://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js',
+
+            {
+                pattern: 'test/*.html'
+            }
+        ],
+
+        browsers: [
+            'PhantomJS'
+        ],
+
+        plugins: [
+            'karma-mocha',
+            'karma-mocha-reporter',
+            'karma-chai',
+            'karma-fixture',
+            'karma-phantomjs-launcher',
+            'karma-html2js-preprocessor'
+        ],
+
+        preprocessors: {
+            'test/*.html': ['html2js']
+        },
+
+        singleRun: true
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
