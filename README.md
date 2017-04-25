@@ -1,4 +1,7 @@
-# api documentation for  [lory.js (v2.2.1)](https://github.com/meandmax/lory#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-lory.js.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-lory.js) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-lory.js.svg)](https://travis-ci.org/npmdoc/node-npmdoc-lory.js)
+# npmdoc-lory.js
+
+#### basic api documentation for  [lory.js (v2.2.1)](https://github.com/meandmax/lory#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-lory.js.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-lory.js) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-lory.js.svg)](https://travis-ci.org/npmdoc/node-npmdoc-lory.js)
+
 #### Touch enabled minimalistic slider written in vanilla JavaScript.
 
 [![NPM](https://nodei.co/npm/lory.js.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/lory.js)
@@ -164,7 +167,8 @@
         "start": "better-npm-run start",
         "travis": "npm run build && npm run karma-travis"
     },
-    "version": "2.2.1"
+    "version": "2.2.1",
+    "bin": {}
 }
 ```
 
